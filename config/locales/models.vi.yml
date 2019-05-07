@@ -1,0 +1,8 @@
+vi:
+  activerecord:
+    models:
+      user: Người dùng
+    attributes:
+      user:
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu

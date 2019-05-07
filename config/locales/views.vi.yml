@@ -1,0 +1,7 @@
+vi:
+  views:
+    sign_up: Đăng ký
+    password_minimum_length: "(tối thiểu %{count} ký tự)"
+    log_in: Đăng nhập
+    forgot_password: Quên mật khẩu?
+    not_receive_confirmation_instruction: Không nhận được thư hướng dẫn xác nhận?

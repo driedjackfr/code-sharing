@@ -1,0 +1,7 @@
+en:
+  views:
+    sign_up: Sign up
+    password_minimum_length: "(%{count} characters minimum)"
+    log_in: Log in
+    forgot_password: Forgot your password?
+    not_receive_confirmation_instruction: Did not receive confirmation instruction?
