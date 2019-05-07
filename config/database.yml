@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  encoding: utf8
+  pool: 5
+  username: postgres
+  password:
+
+development:
+  <<: *default
+  database: code_sharing_development
+
+test:
+  <<: *default
+  database: code_sharing_test
+
+production:
+  <<: *default
+  database: code_sharing_production
+  username: postgres
+  password: <%= ENV['CODE_SHARING_DATABASE_PASSWORD'] %>
