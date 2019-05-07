@@ -1,20 +1,28 @@
-h2 = t("views.sign_up")
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      em< = t("views.password_minimum_length", count: @minimum_password_length)
-    br
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit t("views.sign_up")
-= render "devise/shared/links"
+.content.grid-container
+  .grid-item
+  .grid-item
+    h2.text-center = t("views.sign_up")
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field
+        = f.label :email
+        br
+        .text-center
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: 'devise-input'
+      .field
+        = f.label :password
+        - if @minimum_password_length
+          em< = t("views.password_minimum_length", count: @minimum_password_length)
+        br
+        .text-center
+          = f.password_field :password, autocomplete: "new-password", class: 'devise-input'
+      .field
+        = f.label :password_confirmation
+        br
+        .text-center
+          = f.password_field :password_confirmation, autocomplete: "new-password", class: 'devise-input'
+      .actions.text-center
+        = f.submit t("views.sign_up")
+    = render "devise/shared/links"
+  .grid-item
+

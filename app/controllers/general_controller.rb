@@ -1,5 +1,3 @@
 class GeneralController < ApplicationController
-  def top
-
-  end
+  def top; end
 end
