@@ -4,5 +4,7 @@ vi:
       user: Người dùng
     attributes:
       user:
+        nickname: Biệt danh
         password: Mật khẩu
         password_confirmation: Xác nhận mật khẩu
+        remember_me: Ghi nhớ đăng nhập

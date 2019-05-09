@@ -1,0 +1,17 @@
+vi:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            nickname:
+              blank: không được để trống
+              too_short: "hơi ngắn (ngắn nhất là %{count} ký tự)"
+              too_long: "dài quá (nhiều nhất là %{count} ký tự)"
+            email:
+              blank: không được để trống
+            password:
+              blank: không được để trống
+              too_short: "hơi ngắn (ngắn nhất là %{count} ký tự)"
+            password_confirmation:
+              confirmation: không khớp
