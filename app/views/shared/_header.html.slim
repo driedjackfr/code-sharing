@@ -1,0 +1,16 @@
+header.grid-header
+  .title
+    h1
+      = link_to 'Code Sharing', root_path, class: 'plain'
+    p Học hỏi và trao đổi về code
+  nav.grid-nav.text-right
+    ul.navs
+      - if current_user
+        li
+          = link_to t('views.navs.write'), '#'
+    div
+      - if current_user
+        = link_to t('views.sign_out'), destroy_user_session_path,
+                  method: :delete, class: 'btn second'
+      - else
+        = link_to t('views.sign_in'), new_user_session_path, class: 'btn'

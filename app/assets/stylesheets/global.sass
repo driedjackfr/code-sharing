@@ -7,25 +7,56 @@ p
 .content
   margin: auto
   max-width: 800px
-.grid-container
+.grid-form
   display: grid
   grid-template-columns: auto 300px auto
 .text-center
   text-align: center
+.text-right
+  text-align: right
+.grid-header
+  display: grid
+  grid-template-columns: auto auto
+.plain
+  text-decoration: none
+  color: #000
 
 input
   font-size: 16px
-
+// Message
 .notice
   background: #c8f4f6
   padding: 10px 15px
 .alert
   background: #e4b9be
   padding: 10px 15px
-
+// Button
 .btn
   padding: 5px 10px
   border-radius: 5px
-  background: #dba047
+  text-decoration: none
+  color: #000
+  background: #d7d2cc
   border: #fff
   margin: 10px 0
+.second
+  background: #fff
+  color: #e65d5a
+// Header
+header
+  background: orange
+  padding: 10px 20px
+  background: #304352  // fallback for old browsers
+  background: linear-gradient(to right, #d7d2cc, #304352) // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+  .grid-nav
+    display: grid
+    grid-template-columns: auto 100px
+  nav
+    padding: 25px 0
+    .navs
+      list-style-type: none
+      a
+        color: #fff
+        &:active
+          color: #fff
+
