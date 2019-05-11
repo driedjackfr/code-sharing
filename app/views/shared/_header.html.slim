@@ -12,5 +12,5 @@ header.grid-header
       - if current_user
         = link_to t('views.sign_out'), destroy_user_session_path,
                   method: :delete, class: 'btn second'
-      - else
-        = link_to t('views.sign_in'), new_user_session_path, class: 'btn'
+      / - else
+      /   = link_to t('views.sign_in'), new_user_session_path, class: 'btn'

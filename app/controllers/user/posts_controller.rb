@@ -2,7 +2,7 @@ class User::PostsController < User::ApplicationController
   before_action :current_post, only: %i(show edit update destroy)
 
   def index
-    @posts = current_user.posts.order(created_at: :desc)
+    @posts = current_user.posts.sort_new
   end
 
   def show; end

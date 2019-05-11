@@ -1,1 +1,5 @@
-.contain
+.wrap
+  - @posts.each do |date, posts|
+    em.date = date
+    - posts.each do |post|
+      p.label = link_to post.title, post_path(post), class: 'plain'
