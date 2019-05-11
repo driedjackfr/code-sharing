@@ -1,5 +1,11 @@
 class User::PostsController < User::ApplicationController
-  before_action :current_post, only: :show
+  before_action :current_post, only: %i(show edit update destroy)
+
+  def index
+    @posts = current_user.posts.order(created_at: :desc)
+  end
+
+  def show; end
 
   def new
     @post = current_user.posts.new
@@ -11,7 +17,18 @@ class User::PostsController < User::ApplicationController
     render :new
   end
 
-  def show; end
+  def edit; end
+
+  def update
+    is_updated = @post.update(post_params)
+    return redirect_to user_post_path(@post), notice: t('.success') if is_updated
+    render :edit
+  end
+
+  def destroy
+    message = @post.destroy ? { notice: t('.success') } : { alert: t('.fail') }
+    return redirect_to user_posts_path, message
+  end
 
   private
 

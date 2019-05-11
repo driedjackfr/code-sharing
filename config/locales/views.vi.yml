@@ -9,8 +9,11 @@ vi:
     not_receive_confirmation_instruction: Không nhận được thư hướng dẫn xác nhận?
     navs:
       write: Viết bài
+      mine: Bài viết của tôi
     posts:
       new: Bài viết mới
+      edit: Chỉnh sửa bài viết
   helpers:
     submit:
-      create: "%{model} mới"
+      create: "Tạo %{model}"
+      update: "Cập nhật %{model}"

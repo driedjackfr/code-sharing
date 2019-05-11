@@ -1,9 +1,10 @@
 .content
   .wrap
     .grid-title
-      h1 = @post.title
+      h1 = t('views.posts.edit')
       .actions.text-right
-        = link_to t('.edit'), edit_user_post_path(@post), class: 'btn'
+        = link_to t('.back_to'), user_post_path(@post), class: 'btn'
         = link_to t('.delete'), user_post_path(@post), method: :delete,
                   data: { confirm: t('.delete_confirmation')}, class: 'btn second'
-    = sanitize @post.body.to_s
+
+    = render 'form'

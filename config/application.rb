@@ -17,5 +17,7 @@ module CodeSharing
     # the framework and any gems in your application.
     config.i18n.default_locale = :vi
     config.i18n.available_locales = %i[en vi]
+    config.time_zone = 'Hanoi'
+    config.active_record.time_zone_aware_types = %i[datetime time]
   end
 end
