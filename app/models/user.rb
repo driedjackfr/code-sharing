@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   before_validation :strip_nickname
 
+  has_many :posts, dependent: :destroy
+
   validates :nickname, presence: true, length: { in: 2..30, **CAN_BE_BLANK },
                        uniqueness: CAN_BE_BLANK
 

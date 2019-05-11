@@ -7,7 +7,7 @@ header.grid-header
     ul.navs
       - if current_user
         li
-          = link_to t('views.navs.write'), '#'
+          = link_to t('views.navs.write'), new_user_post_path
     div
       - if current_user
         = link_to t('views.sign_out'), destroy_user_session_path,

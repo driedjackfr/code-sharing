@@ -2,9 +2,13 @@ vi:
   activerecord:
     models:
       user: Người dùng
+      post: Bài viết
     attributes:
       user:
         nickname: Biệt danh
         password: Mật khẩu
         password_confirmation: Xác nhận mật khẩu
         remember_me: Ghi nhớ đăng nhập
+      post:
+        title: Tựa đề
+        body: Nội dung

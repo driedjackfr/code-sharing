@@ -9,3 +9,8 @@ vi:
     not_receive_confirmation_instruction: Không nhận được thư hướng dẫn xác nhận?
     navs:
       write: Viết bài
+    posts:
+      new: Bài viết mới
+  helpers:
+    submit:
+      create: "%{model} mới"
