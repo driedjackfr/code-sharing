@@ -1,5 +1,9 @@
 = form_with model: [:user, @post], local: true do |f|
   .field
+    = f.label :category, class: 'label'
+    br
+    = f.select :category_id, Category.all.collect { |cat| [cat.name, cat.id] }
+  .field
     = f.label :title, class: 'label'
     br
     = f.text_field :title, class: 'w-100'
