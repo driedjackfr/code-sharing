@@ -1,5 +1,8 @@
 .wrap
   - @posts.each do |date, posts|
-    em.date = date
+    em.gray = date
     - posts.each do |post|
-      p.label = link_to post.title, post_path(post), class: 'plain'
+      p
+        - cate = post.category
+        span.tag.gray class=cate.style_class = cate.name
+        = link_to post.title, post_path(post), class: 'plain label'

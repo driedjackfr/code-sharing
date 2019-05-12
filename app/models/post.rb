@@ -7,4 +7,8 @@ class Post < ApplicationRecord
   validates :title, :body, presence: true
 
   scope :sort_new, -> { order(created_at: :desc) }
+
+  def created_datetime
+    created_at.strftime('%d/%m/%Y %T')
+  end
 end
