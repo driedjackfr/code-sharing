@@ -1,6 +1,6 @@
 .wrap
   .grid-title.post-title
-    h1 = @post.title
+    h2 = @post.title
     .actions.text-right
       = link_to t('.edit'), edit_user_post_path(@post), class: 'btn'
       = link_to t('.delete'), user_post_path(@post), method: :delete,
