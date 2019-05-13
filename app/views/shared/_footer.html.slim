@@ -1,3 +1,6 @@
-footer
-  p> Liên hệ qua
-  = mail_to 'driedjack@gmail', 'mail'
+footer.grid-footer
+  .first
+    = link_to 'Lịch sử trang', history_path, class: 'plain'
+  .last
+    p> Liên hệ qua
+    = mail_to 'driedjack@gmail', 'mail'

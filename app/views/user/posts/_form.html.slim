@@ -4,6 +4,10 @@
     br
     = f.select :category_id, Category.all.collect { |cat| [cat.name, cat.id] }
   .field
+    = f.label :form, class: 'label'
+    br
+    = f.select :form, Post.forms.keys
+  .field
     = f.label :title, class: 'label'
     br
     = f.text_field :title, class: 'w-100'

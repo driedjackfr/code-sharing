@@ -1,0 +1,13 @@
+.post-title
+  h2 = @post.title
+  .description
+    .post-info
+      i.fas.fa-folder
+      span = @post.category.name
+    .post-info
+      i.fas.fa-calendar
+      span = @post.created_datetime
+    .post-info
+      i.fas.fa-pencil-alt
+      span = @post.user.nickname
+= sanitize @post.body.to_s
