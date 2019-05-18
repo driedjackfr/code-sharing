@@ -1,4 +1,4 @@
-# README
+# Code Sharing
 
 Dự án này là nơi để mình chia sẻ vài thứ linh tinh về code. Các tính năng mới sẽ được cập nhật ở [đây](http://code-sharing.herokuapp.com/history).
 
